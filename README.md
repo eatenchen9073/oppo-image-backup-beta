@@ -33,19 +33,19 @@
 
 ## 从源码构建
 
-当前构建脚本面向 macOS 15+ 的 Apple 芯片 Mac，需要 Xcode Command Line Tools。仓库保留了构建所需的上游依赖源码归档，并在构建时检查其 SHA-256。
+完整源码、构建脚本和所需依赖归档可从 [0.7.19 发布页下载](https://github.com/eatenchen9073/oppo-image-backup-beta/releases/tag/v0.7.19-beta)（文件名为 `OPPOBackup-Dev-0.7.19-source.zip`）。解压后，在 macOS 15+ 的 Apple 芯片 Mac 上安装 Xcode Command Line Tools，并在源码目录运行：
 
 ```sh
 sh build-apple-demo.sh /absolute/path/to/new-output
 ```
 
-构建脚本会创建一个新的输出目录。不要把手机资料或正式备份目录作为构建输出位置。项目自动化与模拟测试可在项目根目录运行：
+构建脚本会创建一个新的输出目录。不要把手机资料或正式备份目录作为构建输出位置。模拟测试可在源码目录运行：
 
 ```sh
 python3 -m unittest discover -s tests -v
 ```
 
-第三方组件、数据来源和署名信息见 `third_party/README.md`、`third_party/licenses/`、`assets/geonames/GEONAMES_NOTICE.txt` 和 `assets/ui/NOTICE.md`。
+第三方组件、数据来源和署名信息见源码包内的 `third_party/README.md`、`third_party/licenses/`、`assets/geonames/GEONAMES_NOTICE.txt` 和 `assets/ui/NOTICE.md`。
 
 ## 许可与再使用
 
